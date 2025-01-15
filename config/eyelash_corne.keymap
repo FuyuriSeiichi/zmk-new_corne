@@ -86,9 +86,9 @@
             display-name = "SYMBOL";
             bindings = <
 &trans  &kp EXCL      &kp AT        &kp HASH   &kp DLLR   &kp PRCNT                           &bt BT_SEL 1                &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSLH
-&trans  &bt BT_CLR    &mkp LCLK     &mkp MCLK  &mkp RCLK  &mkp MB4            &bt BT_PRV      &none           &bt BT_NXT  &kp HOME   &kp PG_UP  &kp LBKT   &kp RBKT  &kp SEMI  &trans
-&trans  &out OUT_USB  &out OUT_BLE  &none      &none      &mkp MB5  &trans                    &bt BT_CLR                  &kp END    &kp PG_DN  &kp COMMA  &kp DOT   &trans    &trans
-                                    &trans     &trans     &none                                                            &kp RET    &trans     &trans
+&trans  &none         &kp UP        &mkp MCLK  &mkp RCLK  &mkp MB4            &bt BT_PRV      &none           &bt BT_NXT  &kp HOME   &kp PG_UP  &kp LBKT   &kp RBKT  &kp SEMI  &trans
+&trans  &kp LEFT      &kp DOWN      &kp RIGHT  &none      &mkp MB5  &bt BT_CLR_ALL            &bt BT_CLR                  &kp END    &kp PG_DN  &kp COMMA  &kp DOT   &trans    &trans
+                                    &trans     &trans     &none                                                           &none      &trans     &trans
             >;
             sensor-bindings = <&scroll_encoder>;
         };
