@@ -40,7 +40,7 @@
             compatible = "zmk,behavior-tap-dance";
             display-name = "-/= Tap Dance";
             #binding-cells = <0>;
-            bindings = <&kp MINUS>, <&kp EUQAL>;
+            bindings = <&kp MINUS>, <&kp EQUAL>;
         };
     };
 
