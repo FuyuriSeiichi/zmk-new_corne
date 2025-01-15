@@ -26,9 +26,9 @@
     behaviors {
         td0: td0 {
             compatible = "zmk,behavior-tap-dance";
-            display-name = "-/= Tap Dance";
+            display-name = "Shift/Caps Lock Tap Dance";
             #binding-cells = <0>;
-            bindings = <&kp MINUS>, <&kp EQUAL>;
+            bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
         };
         td1: td1 {
             compatible = "zmk,behavior-tap-dance";
@@ -70,7 +70,7 @@
             bindings = <
 &kp F1  &kp F2           &kp F3          &kp F4        &kp F5        &kp F6                                        &kp UP                     &kp F7           &kp F8           &kp F9           &kp F10           &kp F11    &kp F12
 &trans  &kp N1           &kp N2          &kp N3        &kp N4        &kp N5                           &kp LEFT   &kp SPACE   &kp RIGHT        &kp N6           &kp N7           &kp N8           &kp N9            &kp N0     &trans
-&trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans        &trans        &rgb_ug RGB_EFF &kp C_MUTE                    &kp DOWN                   &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD   &kp trans  &trans
+&trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans        &trans        &rgb_ug RGB_EFF &kp C_MUTE                    &kp DOWN                   &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD   &kp FSLH   &trans
                                          &trans        &trans        &trans                                                                         &kp INS          &kp DEL          &trans
             >;
             sensor-bindings = <&scroll_encoder>;
@@ -79,9 +79,9 @@
         raise_layer {
             display-name = "SYMBOL";
             bindings = <
-&trans  &kp EXCL      &kp AT        &kp HASH   &kp DLLR   &kp PRCNT                           &mmv MOVE_UP                     &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &td0
-&trans  &bt BT_CLR    &mkp LCLK     &mkp MCLK  &mkp RCLK  &mkp MB4            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp HOME   &kp PG_UP  &kp INS    &kp LBKT  &kp RBKT  &kp BSLH
-&trans  &out OUT_USB  &out OUT_BLE  &none      &none      &mkp MB5  &trans                    &mmv MOVE_DOWN                   &kp END    &kp PG_DN  &kp DEL    &kp DOT   &trans    &kp trans
+&trans  &kp EXCL      &kp AT        &kp HASH   &kp DLLR   &kp PRCNT                           &mmv MOVE_UP                     &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
+&trans  &bt BT_CLR    &mkp LCLK     &mkp MCLK  &mkp RCLK  &mkp MB4            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
+&trans  &out OUT_USB  &out OUT_BLE  &none      &none      &mkp MB5  &trans                    &mmv MOVE_DOWN                   &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
                                     &trans     &trans     &kp SPACE                                                            &kp RET    &trans     &trans
             >;
             sensor-bindings = <&scroll_encoder>;
