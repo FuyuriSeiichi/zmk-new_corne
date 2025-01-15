@@ -6,7 +6,7 @@ layers:
   - E
   - R
   - T
-  - '&mmv SCRL_UP'
+  - $$mdi:pan-up$$
   - Y
   - U
   - I
@@ -21,7 +21,7 @@ layers:
   - G
   - $$mdi:pan-left$$
   - SLCK
-  - $$mdi:pan-down$$
+  - $$mdi:pan-right$$
   - H
   - J
   - K
@@ -31,22 +31,22 @@ layers:
   - $$mdi:apple-keyboard-control$$
   - Z
   - X
-  - {t: C, h: '$$mdi:apple-keyboard-option$$'}
+  - C
   - V
   - B
   - $$mdi:printer-outline$$
-  - '&mmv SCRL_DOWN'
+  - $$mdi:pan-down$$
   - N
   - M
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - $$mdi:apple-keyboard-control$$
-  - {t: '$$mdi:backspace$$', type: backspace}
-  - NUMBER
   - LGUI
+  - NUMBER
+  - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - SYMBOL
+  - $$mdi:keyboard-space$$
   - $$mdi:apple-keyboard-option$$
   NUMBER:
   - F1
@@ -95,8 +95,8 @@ layers:
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - INS
+  - SYMBOL
   - $$mdi:backspace-reverse-outline$$
-  - {t: '$$mdi:transfer$$', type: trans}
   SYMBOL:
   - {t: '$$mdi:transfer$$', type: trans}
   - '!'
@@ -141,7 +141,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {type: held}
