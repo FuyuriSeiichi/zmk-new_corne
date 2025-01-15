@@ -76,7 +76,7 @@
             bindings = <
 &kp F1  &kp F2           &kp F3          &kp F4        &kp F5        &kp F6                                        &mmv MOVE_UP                &kp F7           &kp F8           &kp F9           &kp F10           &kp F11    &kp F12
 &trans  &kp N1           &kp N2          &kp N3        &kp N4        &kp N5                        &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT  &kp N6           &kp N7           &kp N8           &kp N9            &kp N0     &trans
-&trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans        &trans        &rgb_ug RGB_EFF &kp C_MUTE                    &mmv MOVE_DOWN              &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD   &kp FSLH   &trans
+&trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans        &trans        &rgb_ug RGB_EFF &kp C_MUTE                    &mmv MOVE_DOWN              &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD   &trans     &trans
                                          &trans        &trans        &trans                                                                         &kp INS          &kp DEL          &trans
             >;
             sensor-bindings = <&scroll_encoder>;
@@ -86,8 +86,8 @@
             display-name = "SYMBOL";
             bindings = <
 &trans  &kp EXCL      &kp AT        &kp HASH   &kp DLLR   &kp PRCNT                           &bt BT_SEL 1                &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSLH
-&trans  &bt BT_CLR    &mkp LCLK     &mkp MCLK  &mkp RCLK  &mkp MB4            &bt BT_PRV      &none           &bt BT_NXT  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &trans  &trans
-&trans  &out OUT_USB  &out OUT_BLE  &none      &none      &mkp MB5  &trans                    &bt BT_CLR                  &kp UNDER  &kp PLUS   &kp COMMA  &kp DOT  &kp BSLH  &trans
+&trans  &bt BT_CLR    &mkp LCLK     &mkp MCLK  &mkp RCLK  &mkp MB4            &bt BT_PRV      &none           &bt BT_NXT  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp SEMI  &trans
+&trans  &out OUT_USB  &out OUT_BLE  &none      &none      &mkp MB5  &trans                    &bt BT_CLR                  &kp UNDER  &kp PLUS   &kp COMMA  &kp DOT   &trans    &trans
                                     &trans     &trans     &kp SPACE                                                            &kp RET    &trans     &trans
             >;
             sensor-bindings = <&scroll_encoder>;
