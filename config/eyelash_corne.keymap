@@ -58,26 +58,33 @@
         tap-ms = <30>;
     };
 
+    scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
+   	compatible = "zmk,behavior-sensor-rotate";
+   	#sensor-binding-cells = <0>;
+      bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+      tap-ms = <20>;
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&td1            &kp Q  &kp W      &kp E       &kp R  &kp T                              &kp UP                &kp Y            &kp U        &kp I      &kp O    &kp P     &td2
-&mt LSHIFT TAB  &kp A  &kp S      &kp D       &kp F  &kp G              &kp LEFT  &kp SLCK   &kp RIGHT  &kp H        &kp J       &kp K      &kp L    &kp SEMI  &mt RSHIFT SQT
-&kp LCTRL       &kp Z  &kp X      &kp C       &kp V  &kp B       &kp PSCRN             &kp DOWN                  &kp N        &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RCTRL
+&td1            &kp Q  &kp W      &kp E       &kp R  &kp T                              &msc SCRL_UP               &kp Y        &kp U  &kp I      &kp O    &kp P     &td2
+&mt LSHIFT TAB  &kp A  &kp S      &kp D       &kp F  &kp G              &msc SCRL_LEFT  &kp SLCK  &msc SCRL_RIGHT  &kp H        &kp J  &kp K      &kp L    &kp SEMI  &mt RSHIFT SQT
+&kp LCTRL       &kp Z  &kp X      &kp C       &kp V  &kp B       &kp PSCRN              &msc SCRL_DOWN             &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RCTRL
                              &mt LALT BSPC  &mo 1   &kp LGUI                                           &kp ENTER  &kp SPACE  &kp RALT
             >;
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+            sensor-bindings = <&scroll_up_down>;
         };
 
         lower_layer {
             display-name = "NUMBER";
             bindings = <
-&kp F1  &kp F2            &kp F3          &kp F4        &kp F5        &kp F6                                                       &mmv MOVE_UP                                  &kp F7             &kp F8             &kp F9       &kp F10           &kp F11    &kp F12
-&trans  &kp N1           &kp N2          &kp N3        &kp N4      &kp N5                        &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT  &kp N6             &kp N7           &kp N8       &kp N9            &kp N0     &trans
-&trans  &trans            &trans            &trans        &trans       &trans    &kp RGB_TOG                          &mmv MOVE_DOWN                             &mkp MCLK     &mkp RCLK   &trans         &trans             &trans      &trans
+&kp F1  &kp F2           &kp F3          &kp F4        &kp F5        &kp F6                                        &mmv MOVE_UP                &kp F7           &kp F8        &kp F9       &kp F10           &kp F11    &kp F12
+&trans  &kp N1           &kp N2          &kp N3        &kp N4        &kp N5                        &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT  &kp N6           &kp N7        &kp N8       &kp N9            &kp N0     &trans
+&trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans        &trans        &rgb_ug RGB_EFF &kp C_MUTE                    &mmv MOVE_DOWN              &mkp LCLK        &mkp MCLK     &mkp RCLK    &rgb_ug RGB_BRD   &trans     &trans
                                          &trans        &trans        &trans                                                        &kp INS      &mo 2         &mt LALT DEL
             >;
             sensor-bindings = <&scroll_encoder>;
@@ -87,7 +94,7 @@
             display-name = "SYMBOL";
             bindings = <
 &trans  &kp EXCL      &kp AT        &kp HASH   &kp DLLR   &kp PRCNT                           &bt BT_SEL 1                &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSLH
-&trans  &none         &kp UP        &mkp MCLK  &mkp RCLK  &mkp MB4            &bt BT_PRV      &none           &bt BT_NXT  &kp HOME   &kp PG_UP  &kp LBKT   &kp RBKT  &kp SEMI  &trans
+&trans  &kp Q         &kp UP         &kp E  &mkp RCLK  &mkp MB4            &bt BT_PRV      &none           &bt BT_NXT  &kp HOME   &kp PG_UP  &kp LBKT   &kp RBKT  &kp SEMI  &trans
 &trans  &kp LEFT      &kp DOWN      &kp RIGHT  &none      &mkp MB5  &bt BT_CLR_ALL            &bt BT_CLR                  &kp END    &kp PG_DN  &kp COMMA  &kp DOT   &trans    &trans
                                     &trans     &trans     &none                                                           &none      &trans     &trans
             >;
