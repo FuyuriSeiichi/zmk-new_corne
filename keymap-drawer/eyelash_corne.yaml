@@ -130,7 +130,7 @@ layers:
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
-  - F
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '&mkp MB5'
   - BT CLR ALL
   - $$mdi:bluetooth-off$$
