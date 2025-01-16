@@ -6,7 +6,7 @@ layers:
   - E
   - R
   - T
-  - $$mdi:arrow-up-bold$$
+  - $$mdi:pan-up$$
   - Y
   - U
   - I
@@ -19,9 +19,9 @@ layers:
   - D
   - F
   - G
-  - $$mdi:arrow-left-bold$$
+  - $$mdi:pan-left$$
   - SLCK
-  - $$mdi:arrow-right-bold$$
+  - $$mdi:pan-right$$
   - H
   - J
   - K
@@ -35,7 +35,7 @@ layers:
   - V
   - B
   - $$mdi:printer-outline$$
-  - $$mdi:arrow-down-bold$$
+  - $$mdi:pan-down$$
   - N
   - M
   - {t: ',', s: <}
@@ -78,17 +78,17 @@ layers:
   - {t: '0', s: )}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - RGB OFF
+  - RGB ON
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - RGB TOG
+  - RGB EFF
+  - $$mdi:volume-off$$
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
+  - $$mdi:mouse-left-click-outline$$
   - $$mdi:mouse-scroll-wheel$$
   - $$mdi:mouse-right-click-outline$$
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - RGB BRD
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -112,9 +112,9 @@ layers:
   - )
   - {t: \, s: '|'}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - Q
   - $$mdi:arrow-up-bold$$
-  - $$mdi:mouse-scroll-wheel$$
+  - E
   - $$mdi:mouse-right-click-outline$$
   - '&mkp MB4'
   - {h: '$$mdi:arrow-up-bold$$', s: '$$mdi:bluetooth-connect$$'}
