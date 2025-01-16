@@ -58,13 +58,6 @@
         tap-ms = <30>;
     };
 
-    scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
-   	compatible = "zmk,behavior-sensor-rotate";
-   	#sensor-binding-cells = <0>;
-      bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-      tap-ms = <20>;
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -95,7 +88,7 @@
             bindings = <
 &trans  &kp EXCL      &kp AT        &kp HASH   &kp DLLR   &kp PRCNT                           &bt BT_SEL 1                &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSLH
 &trans  &kp Q         &kp UP         &kp E  &mkp RCLK  &mkp MB4            &bt BT_PRV      &none           &bt BT_NXT  &kp HOME   &kp PG_UP  &kp LBKT   &kp RBKT  &kp SEMI  &trans
-&trans  &kp LEFT      &kp DOWN      &kp RIGHT  &none      &mkp MB5  &bt BT_CLR_ALL            &bt BT_CLR                  &kp END    &kp PG_DN  &kp COMMA  &kp DOT   &trans    &trans
+&trans  &kp LEFT      &kp DOWN      &kp RIGHT  &kp F    &mkp MB5  &bt BT_CLR_ALL            &bt BT_CLR                  &kp END    &kp PG_DN  &kp COMMA  &kp DOT   &trans    &trans
                                     &trans     &trans     &none                                                           &none      &trans     &trans
             >;
             sensor-bindings = <&scroll_encoder>;
