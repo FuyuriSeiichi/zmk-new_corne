@@ -6,7 +6,7 @@ layers:
   - E
   - R
   - T
-  - $$mdi:pan-up$$
+  - $$mdi:arrow-up-bold$$
   - Y
   - U
   - I
@@ -19,9 +19,9 @@ layers:
   - D
   - F
   - G
-  - $$mdi:pan-left$$
+  - $$mdi:arrow-left-bold$$
   - SLCK
-  - $$mdi:pan-right$$
+  - $$mdi:arrow-right-bold$$
   - H
   - J
   - K
@@ -35,7 +35,7 @@ layers:
   - V
   - B
   - $$mdi:printer-outline$$
-  - $$mdi:pan-down$$
+  - $$mdi:arrow-down-bold$$
   - N
   - M
   - {t: ',', s: <}
@@ -78,12 +78,12 @@ layers:
   - {t: '0', s: )}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - RGB OFF
-  - RGB ON
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - RGB EFF
-  - $$mdi:volume-off$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - RGB TOG
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - $$mdi:mouse-left-click-outline$$
   - $$mdi:mouse-scroll-wheel$$
@@ -104,7 +104,7 @@ layers:
   - '#'
   - $
   - '%'
-  - {h: '2', s: '$$mdi:bluetooth-connect$$'}
+  - $$mdi:pan-up$$
   - ^
   - '&'
   - '*'
@@ -116,10 +116,10 @@ layers:
   - $$mdi:arrow-up-bold$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - T
   - {h: '$$mdi:arrow-up-bold$$', s: '$$mdi:bluetooth-connect$$'}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {h: '$$mdi:arrow-down-bold$$', s: '$$mdi:bluetooth-connect$$'}
+  - $$mdi:pan-left$$
+  - SLCK
+  - $$mdi:pan-right$$
   - HOME
   - PG UP
   - {t: '[', s: '{'}
@@ -131,9 +131,9 @@ layers:
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '&mkp MB5'
-  - BT CLR ALL
-  - $$mdi:bluetooth-off$$
+  - {h: '$$mdi:arrow-down-bold$$', s: '$$mdi:bluetooth-connect$$'}
+  - RGB TOG
+  - $$mdi:pan-down$$
   - END
   - PG DN
   - {t: ',', s: <}
