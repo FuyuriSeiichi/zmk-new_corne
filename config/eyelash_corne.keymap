@@ -66,7 +66,7 @@
 &td1            &kp Q  &kp W      &kp E       &kp R  &kp T                              &msc SCRL_UP               &kp Y        &kp U  &kp I      &kp O    &kp P     &td2
 &mt LSHIFT TAB  &kp A  &kp S      &kp D       &kp F  &kp G              &msc SCRL_LEFT  &kp SLCK  &msc SCRL_RIGHT  &kp H        &kp J  &kp K      &kp L    &kp SEMI  &mt RSHIFT SQT
 &kp LCTRL       &kp Z  &kp X      &kp C       &kp V  &kp B       &kp PSCRN              &msc SCRL_DOWN             &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RCTRL
-                             &kp BSPC  &mo 1   &kp LGUI                                           &kp RALT  &kp ENTER  &kp SPACE
+                             &mt LALT BSPC  &mo 1   &kp LGUI                                           &kp ENTER  &kp SPACE  &kp RALT
             >;
             sensor-bindings = <&scroll_encoder>;
         };
@@ -77,7 +77,7 @@
 &kp F1  &kp F2           &kp F3          &kp F4        &kp F5        &kp F6                                        &mmv MOVE_UP                &kp F7           &kp F8        &kp F9       &kp F10           &kp F11    &kp F12
 &trans  &kp N1           &kp N2          &kp N3        &kp N4        &kp N5                        &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT  &kp N6           &kp N7        &kp N8       &kp N9            &kp N0     &trans
 &trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans        &trans        &rgb_ug RGB_EFF &kp C_MUTE                    &mmv MOVE_DOWN              &mkp LCLK        &mkp MCLK     &mkp RCLK    &rgb_ug RGB_BRD   &trans     &trans
-                                         &trans        &trans        &trans                                                                         &kp INS      &mo 2         &mt LALT DEL
+                                         &trans        &trans        &trans                                                        &kp INS      &mo 2         &mt LALT DEL
             >;
             sensor-bindings = <&scroll_encoder>;
         };
