@@ -21,6 +21,7 @@
 
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1200  // 600
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 40    // 10
+#define ZMK_MOUSE_SCRL_VAL 140
 
 / {
     behaviors {
@@ -57,6 +58,13 @@
         tap-ms = <30>;
     };
 
+    scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
+   	compatible = "zmk,behavior-sensor-rotate";
+   	#sensor-binding-cells = <0>;
+      bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+      tap-ms = <20>;
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -68,7 +76,7 @@
 &kp LCTRL       &kp Z  &kp X      &kp C       &kp V  &kp B       &kp PSCRN              &msc SCRL_DOWN             &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RCTRL
                              &mt LALT BSPC  &mo 1   &kp LGUI                                           &kp ENTER  &kp SPACE  &kp RALT
             >;
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&scroll_up_down>;
         };
 
         lower_layer {
