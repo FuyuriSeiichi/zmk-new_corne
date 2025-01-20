@@ -35,7 +35,7 @@
             compatible = "zmk,behavior-tap-dance";
             display-name = "Tab/ESC Tap Dance";
             #binding-cells = <0>;
-            bindings = <&kp TILDE>, <&kp ESC>;
+            bindings = <&kp GRAVE>, <&kp ESC>;
         };
         td2: td2 {
             compatible = "zmk,behavior-tap-dance";
