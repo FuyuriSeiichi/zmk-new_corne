@@ -132,7 +132,7 @@ layers:
   - $$mdi:arrow-right-bold$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {h: '$$mdi:arrow-down-bold$$', s: '$$mdi:bluetooth-connect$$'}
-  - RGB TOG
+  - $$mdi:bluetooth-off$$
   - $$mdi:pan-down$$
   - PG DN
   - END
