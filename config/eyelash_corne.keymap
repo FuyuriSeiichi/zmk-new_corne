@@ -19,7 +19,7 @@
 
  */
 
-#define ZMK_MOUSE_DEFAULT_MOVE_VAL 1200  // 600
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL 1500  // 600
 //#define ZMK_MOUSE_DEFAULT_SCRL_VAL 100   // 10
 #define ZMK_MOUSE_SCRL_VAL 140
 
@@ -45,12 +45,18 @@
         };
     };
 
-    scroll_encoder: scroll_encoder {
-        compatible = "zmk,behavior-sensor-rotate";
-        #sensor-binding-cells = <0>;
-        bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-        tap-ms = <20>;
-    };
+ //   scroll_encoder: scroll_encoder {
+ //       compatible = "zmk,behavior-sensor-rotate";
+ //       #sensor-binding-cells = <0>;
+ //       bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+ //       tap-ms = <20>;
+ //   };
+   scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
+	   compatible = "zmk,behavior-sensor-rotate";
+	   #sensor-binding-cells = <0>;
+      bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+      tap-ms = <20>;
+   };
 
     keymap {
         compatible = "zmk,keymap";
@@ -63,7 +69,7 @@
 &kp LCTRL       &kp Z  &kp X      &kp C       &kp V  &kp B       &kp PSCRN              &kp DOWN             &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RCTRL
                              &mt LALT BSPC  &mo 1   &kp LGUI                                          &mo 2  &kp ENTER  &kp SPACE
             >;
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&scroll_up_down>;
         };
 
         lower_layer {
@@ -74,7 +80,7 @@
 &trans     &kp LEFT         &kp DOWN        &kp RIGHT     &none         &none  &rgb_ug RGB_TOG                        &mmv MOVE_DOWN              &kp PG_DN        &kp END       &kp DEL    &trans            &trans     &trans
                                          &trans        &trans        &none                                                        &mkp LCLK      &mkp MCLK         &mkp RCLK
             >;
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&scroll_up_down>;
         };
 
         raise_layer {
@@ -85,7 +91,7 @@
 &trans  &kp LEFT      &kp DOWN       &kp RIGHT    &none        &bt BT_NXT   &bt BT_CLR            &msc SCRL_DOWN             &kp PG_DN  &kp END   &kp COMMA  &kp DOT   &trans    &trans
                                     &kp LALT     &trans     &none                                                           &none      &trans     &none
             >;
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&scroll_up_down>;
         };
     };
 };
