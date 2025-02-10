@@ -51,11 +51,11 @@
         bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
     };
 
-    rot_kp: sensor_rotate_kp {
-            compatible = "zmk,behavior-sensor-rotate-var";
-            #sensor-binding-cells = <2>;
-            bindings = <&msc>, <&msc>;
-        };
+    scroll_encoder: scroll_encoder {
+        compatible = "zmk,behavior-sensor-rotate";
+        #sensor-binding-cells = <0>;
+        bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+        tap-ms = <30>;
     };
 
     keymap {
@@ -69,7 +69,7 @@
 &kp LCTRL       &kp Z  &kp X      &kp C       &kp V  &kp B       &kp PSCRN              &kp DOWN             &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RCTRL
                              &mt LALT BSPC  &mo 1   &kp LGUI                                          &mo 2  &kp ENTER  &kp SPACE
             >;
-            sensor-bindings = <&rot_kp SCRL_UP SCRL_DOWN>;
+            sensor-bindings = <&scroll_encoder>;
         };
 
         lower_layer {
@@ -80,7 +80,7 @@
 &trans     &kp LEFT         &kp DOWN        &kp RIGHT     &none         &none  &kp PSCRN                              &mmv MOVE_DOWN              &kp PG_DN        &kp END       &kp DEL    &trans            &trans     &trans
                                          &trans        &trans        &none                                                        &mkp LCLK      &mkp MCLK         &mkp RCLK
             >;
-            sensor-bindings = <&rot_kp SCRL_UP SCRL_DOWN>;
+            sensor-bindings = <&scroll_encoder>;
         };
 
         raise_layer {
