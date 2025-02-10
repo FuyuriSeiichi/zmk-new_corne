@@ -45,18 +45,18 @@
         };
     };
 
- //   scroll_encoder: scroll_encoder {
- //       compatible = "zmk,behavior-sensor-rotate";
- //       #sensor-binding-cells = <0>;
- //       bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
- //       tap-ms = <20>;
- //   };
-   scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
-	   compatible = "zmk,behavior-sensor-rotate";
-	   #sensor-binding-cells = <0>;
-      bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-      tap-ms = <20>;
-   };
+    rgb_encoder: rgb_encoder {
+        compatible = "zmk,behavior-sensor-rotate";
+        #sensor-binding-cells = <0>;
+        bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
+    };
+
+    scroll_encoder: scroll_encoder {
+        compatible = "zmk,behavior-sensor-rotate";
+        #sensor-binding-cells = <0>;
+        bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+        tap-ms = <30>;
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -69,7 +69,7 @@
 &kp LCTRL       &kp Z  &kp X      &kp C       &kp V  &kp B       &kp PSCRN              &kp DOWN             &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RCTRL
                              &mt LALT BSPC  &mo 1   &kp LGUI                                          &mo 2  &kp ENTER  &kp SPACE
             >;
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&scroll_encoder>;
         };
 
         lower_layer {
@@ -77,10 +77,10 @@
             bindings = <
 &kp TILDE  &kp N1           &kp N2          &kp N3        &kp N4        &kp N5                                        &mmv MOVE_UP                &kp N6           &kp N7        &kp N8     &kp N9            &kp N0     &kp BSLH
 &trans     &none            &kp UP          &none         &none         &kp N5                        &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT  &kp PG_UP        &kp HOME      &kp INS    &trans            &trans     &trans
-&trans     &kp LEFT         &kp DOWN        &kp RIGHT     &none         &none  &rgb_ug RGB_TOG                        &mmv MOVE_DOWN              &kp PG_DN        &kp END       &kp DEL    &trans            &trans     &trans
+&trans     &kp LEFT         &kp DOWN        &kp RIGHT     &none         &none  &kp PSCRN                              &mmv MOVE_DOWN              &kp PG_DN        &kp END       &kp DEL    &trans            &trans     &trans
                                          &trans        &trans        &none                                                        &mkp LCLK      &mkp MCLK         &mkp RCLK
             >;
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&scroll_encoder>;
         };
 
         raise_layer {
@@ -88,10 +88,10 @@
             bindings = <
 &kp F1  &kp F2        &kp F3         &kp F4       &kp F5       &kp F6                             &msc SCRL_UP               &kp F7     &kp F8    &kp F9     &kp F10   &kp F11   &kp F12
 &trans  &none         &kp UP         &none        &none        &bt BT_PRV        &msc SCRL_LEFT   &kp SLCK  &msc SCRL_RIGHT  &kp PG_UP  &kp HOME  &kp LBKT   &kp RBKT  &kp SEMI  &trans
-&trans  &kp LEFT      &kp DOWN       &kp RIGHT    &none        &bt BT_NXT   &bt BT_CLR            &msc SCRL_DOWN             &kp PG_DN  &kp END   &kp COMMA  &kp DOT   &trans    &trans
+&trans  &kp LEFT      &kp DOWN       &kp RIGHT    &none        &bt BT_NXT   &rgb_ug RGB_TOG       &msc SCRL_DOWN             &kp PG_DN  &kp END   &kp COMMA  &kp DOT   &trans    &trans
                                     &kp LALT     &trans     &none                                                           &none      &trans     &none
             >;
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&rgb_encoder>;
         };
     };
 };
