@@ -86,10 +86,10 @@
         raise_layer {
             display-name = "SYMBOL";
             bindings = <
-&kp F1  &kp F2        &kp F3         &kp F4       &kp F5       &kp F6                             &msc SCRL_UP               &kp F7     &kp F8    &kp F9     &kp F10   &kp F11   &kp F12
-&trans  &none         &kp UP         &none        &none        &bt BT_PRV        &msc SCRL_LEFT   &kp SLCK  &msc SCRL_RIGHT  &kp PG_UP  &kp HOME  &kp LBKT   &kp RBKT  &kp SEMI  &trans
-&trans  &kp LEFT      &kp DOWN       &kp RIGHT    &none        &bt BT_NXT   &rgb_ug RGB_TOG       &msc SCRL_DOWN             &kp PG_DN  &kp END   &kp COMMA  &kp DOT   &trans    &trans
-                                    &kp LALT     &trans     &none                                                           &none      &trans     &none
+&kp F1  &kp F2        &kp F3         &kp F4                 &kp F5                 &kp F6                             &msc SCRL_UP               &kp F7     &kp F8    &kp F9     &kp F10   &kp F11   &kp F12
+&trans  &none         &kp UP         &rgb_ug RGB_TOG        &rgb_ug RGB_BRI        &bt BT_PRV        &msc SCRL_LEFT   &kp SLCK  &msc SCRL_RIGHT  &kp PG_UP  &kp HOME  &kp LBKT   &kp RBKT  &kp SEMI  &trans
+&trans  &kp LEFT      &kp DOWN       &kp RIGHT              &rgb_ug RGB_BRD        &bt BT_NXT   &rgb_ug RGB_TOG       &msc SCRL_DOWN             &kp PG_DN  &kp END   &kp COMMA  &kp DOT   &trans    &trans
+                                    &kp LALT     &trans     &none                                                                       &none      &trans     &none
             >;
             sensor-bindings = <&rgb_encoder>;
         };
