@@ -1,3 +1,4 @@
+layout: {zmk_keyboard: eyelash_corne}
 layers:
   QWERTY:
   - '&td1'
@@ -118,7 +119,7 @@ layers:
   - RGB BRI
   - {h: '$$mdi:arrow-up-bold$$', s: '$$mdi:bluetooth-connect$$'}
   - $$mdi:pan-left$$
-  - SLCK
+  - $$mdi:bluetooth-off$$
   - $$mdi:pan-right$$
   - PG UP
   - HOME
